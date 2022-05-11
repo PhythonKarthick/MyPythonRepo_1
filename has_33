@@ -1,0 +1,5 @@
+## Given a list of ints, return True if the array contains a 3 next to a 3 somewhere
+
+def has_33(array):
+    idx = array.index(3)
+    return idx>0 and array[idx+1] == 3
