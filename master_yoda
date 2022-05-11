@@ -1,0 +1,6 @@
+## MASTER YODA: Given a sentence, return a sentence with the words reversed
+
+def master_yoda(text):
+    newstring=text.split()
+    newstring.reverse()
+    return " ".join(newstring)
