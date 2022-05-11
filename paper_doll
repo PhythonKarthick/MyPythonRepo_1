@@ -1,0 +1,7 @@
+## PAPER DOLL: Given a string, return a string where for every character in the original there are three characters
+
+def paper_doll(string):
+    newstring=''
+    for i in range(0,len(string)):
+        newstring += string[i]*3
+    return newstring
