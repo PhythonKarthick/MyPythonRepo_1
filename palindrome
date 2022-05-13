@@ -1,0 +1,5 @@
+## Write a Python function that checks whether a word or phrase is palindrome or not.
+
+def palindrome(string):
+    string = string.replace(' ','')
+    return string == string[::-1]   
