@@ -1,0 +1,7 @@
+## Write a Python function to multiply all the numbers in a list.
+
+def multiply(numbers):  
+    product=1
+    for i in range(0,len(numbers)):
+        product = product*numbers[i]
+    return product 
