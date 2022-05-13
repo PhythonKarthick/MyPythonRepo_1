@@ -1,0 +1,12 @@
+## Write a Python function that accepts a string and calculates the number of upper case letters and lower case letters.
+
+def up_low(s):
+    upper_count=0
+    lower_count=0
+    for letter in s:
+        if letter.islower():
+            lower_count += 1
+        if letter.isupper():
+            upper_count += 1
+    print('No. of Upper case characters:{}'.format(upper_count))
+    print('No. of Lower case characters:{}'.format(lower_count))
