@@ -5,3 +5,8 @@ def ran_check(num,low,high):
         print('{} is in range {} and {}'.format(num,low,high))
     else:
         print('{} is not in range {} and {}'.format(num,low,high))
+
+## If you only wanted to return a boolean:
+
+def ran_bool(num,low,high):
+    return low<=num<=high
