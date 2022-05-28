@@ -1,0 +1,37 @@
+mylist=['0','1','2']
+
+def display_list():
+    print(mylist) 
+    
+from IPython.display import clear_output
+clear_output()   
+
+def get_user_choice():
+    value = 'wrong'
+    while value not in [0,1,2]:
+        user_choice=input("Pick up a position to replace (0,1,2): ")
+        try:
+            value = int(user_choice)
+            if value not in [0,1,2]:
+                print("Sorry,you have picked up a wrong value. Please enter again")
+        except ValueError:
+            clear_output()
+            print("Sorry, that doesn't seem to be an integer")    
+            
+    return value
+
+def get_replacement_value(value):
+    replacement_value = input("Enter the value you want to replace at position {}: ".format(value))
+    mylist[value] = replacement_value
+    return mylist 
+
+def game():
+    user_decision = "Y"
+    while user_decision == "y" or user_decision =="Y":
+        print("Original list:",end=' ') 
+        display_list()
+        value=get_user_choice()
+        get_replacement_value(value)
+        print("Modified list :",end=' ')
+        display_list()
+        user_decision=input("Do you want to play again?(Y/N) :")
